@@ -1,0 +1,100 @@
+/* Defines the style for each cell in the Tic-Tac-Toe board */
+.cell {
+    width: 8vw;  /* The width of each cell is 8% of the viewport width, making it responsive */
+    height: 8vw;  /* The height of each cell is also 8% of the viewport width, keeping it square */
+    align-items: center;  /* Vertically centers the content inside the cell */
+    justify-content: center;  /* Horizontally centers the content inside the cell */
+    font-size: 4vw;  /* The font size is 4% of the viewport width, making the text responsive */
+    text-align: center;  /* Centers the text inside the cell */
+    cursor: pointer;  /* Changes the cursor to a pointer when hovering over a cell */
+    display: flex;  /* Makes the cell a flex container to center its content */
+}
+
+/* Defines the style for the rows of the Tic-Tac-Toe board */
+#row1, #row2, #row3 {
+    display: flex;  /* Makes each row a flex container, allowing cells to be aligned in a row */
+    justify-content: center;  /* Centers the cells within each row horizontally */
+    margin: 0;  /* Removes any default margin around the rows */
+}
+
+/* Defines the style for the entire Tic-Tac-Toe board */
+#board {
+    display: flex; 
+    flex-direction: column;  /* Stacks the rows vertically in a column */
+    align-items: center;  /* Centers the rows horizontally within the board */
+    justify-content: center;  /* Centers the rows vertically within the board */
+    margin: 2vw 0;  /* Adds a small vertical margin above and below the board */
+}
+
+/* Defines the style for the title of the page */
+h1 {
+    text-align: center;  /* Centers the title horizontally */
+    font-size: 4vw;  /* Sets the font size to 4% of the viewport width, making it responsive */
+    margin-bottom: 2vw;  /* Adds some space between the title and the board */
+    color: darkred;
+}
+
+/* Defines the style for the button on the page */
+button {
+    text-align: center;  /* Centers the text inside the button */
+    align-items: center;  /* Vertically centers the content inside the button */
+    justify-content: center;  /* Horizontally centers the content inside the button */
+    display: flex;  /* Makes the button a flex container to center its content */
+    margin-top: 3vw;  /* Adds space above the button */
+    padding: 1vw 2vw;  /* Adds padding inside the button (1% of viewport width top/bottom, 2% left/right) */
+    margin-left: auto;  /* Centers the button horizontally by setting left margin to auto */
+    margin-right: auto; /* Centers the button horizontally by setting right margin to auto */
+    background-color: darkred;  /* Sets the background color of the button to darkred */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over a cell */
+    color: white;  /* Sets the text color of the button to white */
+    font-size: larger;
+}
+
+/* Cell Borders for Grid Layout - Adds borders to each cell to create the Tic-Tac-Toe grid */
+#a1 {
+    border-bottom: 2px solid black;  /* Adds a 2px solid black border to the bottom of the cell */
+    border-right: 2px solid black;  /* Adds a 2px solid black border to the right of the cell */
+} 
+  
+#a2 { 
+    border-bottom: 2px solid black;  /* Adds a 2px solid black border to the bottom of the cell */
+    border-right: 2px solid black;  /* Adds a 2px solid black border to the right of the cell */
+    border-left: 2px solid black;  /* Adds a 2px solid black border to the left of the cell */
+} 
+  
+#a3 { 
+    border-bottom: 2px solid black;  /* Adds a 2px solid black border to the bottom of the cell */
+    border-left: 2px solid black;  /* Adds a 2px solid black border to the left of the cell */
+} 
+  
+#a4 { 
+    border-top: 2px solid black;  /* Adds a 2px solid black border to the top of the cell */
+    border-bottom: 2px solid black;  /* Adds a 2px solid black border to the bottom of the cell */
+    border-right: 2px solid black;  /* Adds a 2px solid black border to the right of the cell */
+} 
+      
+#a5 { 
+    border: 2px solid black;  /* Adds a 2px solid black border around the entire cell */
+} 
+  
+#a6 { 
+    border-top: 2px solid black;  /* Adds a 2px solid black border to the top of the cell */
+    border-bottom: 2px solid black;  /* Adds a 2px solid black border to the bottom of the cell */
+    border-left: 2px solid black;  /* Adds a 2px solid black border to the left of the cell */
+} 
+
+#a7 { 
+    border-top: 2px solid black;  /* Adds a 2px solid black border to the top of the cell */
+    border-right: 2px solid black;  /* Adds a 2px solid black border to the right of the cell */
+} 
+  
+#a8 { 
+    border-top: 2px solid black;  /* Adds a 2px solid black border to the top of the cell */
+    border-right: 2px solid black;  /* Adds a 2px solid black border to the right of the cell */
+    border-left: 2px solid black;  /* Adds a 2px solid black border to the left of the cell */
+} 
+  
+#a9 { 
+    border-top: 2px solid black;  /* Adds a 2px solid black border to the top of the cell */
+    border-left: 2px solid black;  /* Adds a 2px solid black border to the left of the cell */
+}

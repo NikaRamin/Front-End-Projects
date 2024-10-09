@@ -1,0 +1,121 @@
+body {
+    background: linear-gradient(to right, #a5f0ff, rgb(47, 121, 167)); 
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#263f7d;
+    font-family: 'Arial', sans-serif;
+    transition:  0.5s ease, color 0.5s ease;
+}
+
+p{
+    text-shadow: 1px 1px 2px rgba(14, 42, 73, 0.434); 
+}
+    
+
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center;
+}
+
+.weather-icon {
+    width: 100px; 
+}
+
+.btn {
+    background-color: #205da3; 
+    border-color: #154c84;
+}
+
+.btn:hover{ 
+    background-color: rgb(14, 42, 73); 
+}
+.btn:active{
+    background-color: rgba(14, 42, 73, 0.402);
+}
+
+.display-4:hover,
+.lead:hover {
+    color: rgb(14, 42, 73); 
+}
+
+
+.mb-3:hover{
+    box-shadow: 4px 4px rgba(14, 42, 73, 0.684); 
+}
+
+.container{
+    border-radius: 15px;
+    border: 1px 1px black;
+}
+
+.weather-box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.weather-box p {
+    margin: 0;
+    font-size:25px;
+    color:#ecf0f1;
+}
+
+.weather-box p:first-child {
+    margin-bottom: 8px;
+}
+
+.day {
+    background-color: #d7bc63;
+    color: #263f7d;
+    border: 1px solid #a2d5f2;
+}
+.day p{
+    color: #1d2f5d;
+}
+
+.night {
+    background-color: #000d30;
+    color: #d6e2e4;
+    border: 1px solid #34495e;
+}
+
+
+.day-body {
+    background: linear-gradient(to right, #a5f0ff, rgb(47, 121, 167)); 
+}
+
+
+.night-body {
+    background: linear-gradient(to right, #314150, #00276f);
+}
+.day-title{
+    color:  #263f7d; 
+}
+
+.night-title{
+    color: #d6e2e4;
+}
+.day-title, .night-title {
+    transition: color 0.5s ease; 
+}
+
+.weather-box {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease; 
+}
+
+
+.weather-box:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.02); 
+    transition: transform 0.2s, box-shadow 0.2s; 
+}

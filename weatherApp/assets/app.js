@@ -1,12 +1,14 @@
 const btn = document.getElementById("btn");
 const title = document.getElementById("title"); 
 
+//Getting city from the user
 const getCity = function(event) {
     event.preventDefault();
     const city = document.getElementById("location").value;
     sendRequest(city);
 }
 
+//Sending request using axios
 const sendRequest = function(city) {
     const apiKey = "90f8397c351b4957b0a163137240710";
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`; 
@@ -22,6 +24,7 @@ const sendRequest = function(city) {
         });
 }
 
+// adding results to DOM
 const addToDom = function(data, city) {
     const resultBox = document.getElementById("weatherResult");
     resultBox.innerHTML = ''; 
@@ -42,7 +45,7 @@ const addToDom = function(data, city) {
     result.classList.remove('day', 'night');
     title.classList.remove('day-title','night-title');
 
-    // Applying the appropriate class based on the day or night condition
+    // Applying the appropriate class based on the day or night condition of the city
     if (data.current.is_day) {
         result.classList.add('day');
         document.body.classList.add('day-body');

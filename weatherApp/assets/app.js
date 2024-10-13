@@ -9,7 +9,7 @@ const getCity = function(event) {
 
 const sendRequest = function(city) {
     const apiKey = "90f8397c351b4957b0a163137240710";
-    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`; // Fixed quotes
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`; 
     axios.get(url)
         .then(response => {
             if (response.status >= 200 && response.status < 300) {
@@ -24,12 +24,11 @@ const sendRequest = function(city) {
 
 const addToDom = function(data, city) {
     const resultBox = document.getElementById("weatherResult");
-    resultBox.innerHTML = ''; // Clear previous results first
+    resultBox.innerHTML = ''; 
 
     const result = document.createElement('div');
     result.classList.add('weather-box');
 
-    // Use backticks for template literals
     result.innerHTML = `
         <h4>Weather in ${data.location.name},${data.location.country}:</h4>
         <p>${data.current.condition.text}<br>
@@ -39,13 +38,11 @@ const addToDom = function(data, city) {
         Local time: ${data.location.localtime.slice(11)}
         </p>
     `;
-
-    // Remove any existing day/night classes from the body and result
     document.body.classList.remove('day-body', 'night-body');
     result.classList.remove('day', 'night');
     title.classList.remove('day-title','night-title');
 
-    // Apply the appropriate class based on the day or night condition
+    // Applying the appropriate class based on the day or night condition
     if (data.current.is_day) {
         result.classList.add('day');
         document.body.classList.add('day-body');
@@ -58,8 +55,6 @@ const addToDom = function(data, city) {
         title.classList.add('night-title');
 
     }
-
-    // Append the result to the resultBox
     resultBox.appendChild(result);
 }
 
